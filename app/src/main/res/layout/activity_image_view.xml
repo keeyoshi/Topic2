@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".ImageViewActivity">
+    <RadioGroup
+        android:id="@+id/rdGrp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/Pie"
+            android:text="Pie "
+            style="@style/buttonStyle"
+           />
+
+        <RadioButton
+            android:id="@+id/Cake"
+            style="@style/buttonStyle"
+            android:text="Cake " />
+        <RadioButton
+            android:id="@+id/Blueberry"
+            android:text="Blueberry  "
+            style="@style/buttonStyle"/>
+
+    </RadioGroup>
+<ImageView
+    android:layout_below="@+id/rdGrp"
+    android:id="@+id/tvImage"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"/>
+</LinearLayout>

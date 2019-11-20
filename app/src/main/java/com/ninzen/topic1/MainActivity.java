@@ -3,6 +3,7 @@ package com.ninzen.topic1;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -29,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
         btnCalculate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Validate();
                 int result=0;
                 int first = Integer.parseInt(etFirst.getText().toString());
                 int second = Integer.parseInt(etSecond.getText().toString());
@@ -52,5 +54,19 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this, "The result is "+result, Toast.LENGTH_SHORT).show();
             }
         });
+
+    }
+    public void Validate()
+    {
+        if(TextUtils.isEmpty(etFirst.getText().toString()))
+        {
+            etFirst.setError("Enter first number");
+            return;
+        }
+        else if(TextUtils.isEmpty(etSecond.getText().toString()))
+        {
+            etSecond.setError("Enter second number");
+            return;
+        }
     }
 }
