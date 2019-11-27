@@ -27,6 +27,11 @@
             android:text="Blueberry  "
             style="@style/buttonStyle"/>
 
+        <RadioButton
+            android:id="@+id/Close"
+            android:text="Exit"
+            style="@style/buttonStyle"/>
+
     </RadioGroup>
 <ImageView
     android:layout_below="@+id/rdGrp"
